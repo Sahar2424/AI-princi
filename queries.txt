@@ -1,0 +1,23 @@
+17 ?- mother(mona, sahar).
+true.
+
+18 ?- father(steve, sahar).
+true.
+
+19 ?- sister(sahar, lujain).
+true .
+
+20 ?-  brother(steve, mustafa).
+true .
+
+21 ?- father(ahmed, steve).
+true.
+
+22 ?- brother(mustafa, steve).
+true .
+
+23 ?- sister(sukaina, sahar).
+true .
+
+24 ?- mother(taiba, steve).
+true.

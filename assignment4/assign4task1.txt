@@ -1,0 +1,42 @@
+6 ?- house = house.
+true.
+//They’re exactly the same, so Prolog says true.
+
+27 ?- house = abc.
+false.
+//They’re different words, so they don’t match.
+
+28 ?- edge(a,b) = edge(C,b).
+C = a.
+//The b already matches, so C has to be a.
+
+29 ?- edge(a,d) = edge(C,B).
+C = a,
+B = d.
+//Each variable takes the value in the same position.
+
+30 ?- edge(C,B) = edge(a,d).
+C = a,
+B = d.
+//Same thing as above, the variables match the values in their positions.
+
+31 ?- edge(A,f(g,h)) = edge(a,B).
+A = a,
+B = f(g, h).
+//A matches a and B matches f(g,h).
+
+32 ?- edge(A,A) = edge(b,c).
+false.
+//A would have to be both b and c, so it doesn’t work.
+
+33 ?- edge(A,A) = edge(b,b).
+A = b.
+//Both sides have b, so A can be b.
+
+34 ?- A = B, B = f.
+A = B, B = f.
+//A and B are made equal, and then B is set to f, so all of them are f.
+
+35 ?- A = B, B = f, A = e.
+false.
+//A and B already became f, so A can’t also be e.

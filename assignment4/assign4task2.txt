@@ -1,0 +1,27 @@
+42 ?- female(X).
+X = sara ;
+X = nora.
+
+43 ?- male(X).
+X = ali ;
+X = ahmad ;
+X = muhammad ;
+X = faisal ;
+X = hassan ;
+X = khan.
+
+44 ?- parent(X, Y), parent(Y, faisal).
+X = ali.
+Y = muhammad .
+
+45 ?- parent(ahmad, X), female(X).
+X = sara ;
+X = nora.
+
+46 ?- parent(X, ahmad), parent(X, muhammad).
+X = ali.
+
+
+
+48 ?- male(khan), parent(ahmad, khan), parent(ahmad, nora).
+true.
